@@ -17,7 +17,7 @@ export function LegalPage({
         <h1 className="mt-10 text-4xl font-semibold tracking-tight">{title}</h1>
         <div className="mt-6 space-y-4 text-sm leading-7 text-muted">{children}</div>
         <Button className="mt-10" href="#top">
-          Back to DA <em>One</em>
+          Back to DA One
         </Button>
       </Container>
     </div>

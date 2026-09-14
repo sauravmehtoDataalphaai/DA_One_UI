@@ -181,7 +181,7 @@ function LoginForm() {
         <Sparkles size={20} className="text-accent" />
       </div>
       <h1 className="mt-5 text-2xl font-semibold tracking-tight text-ink">Welcome back</h1>
-      <p className="mt-1.5 text-sm text-muted">Sign in to continue to DA <em>One</em>.</p>
+      <p className="mt-1.5 text-sm text-muted">Sign in to continue to DA One.</p>
 
       <form onSubmit={handleSubmit} className="mt-7 space-y-4" noValidate>
         <Field id="login-email" label="Work email address" type="email" value={email} onChange={setEmail} placeholder="you@company.com" autoComplete="email" />

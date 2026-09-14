@@ -1,5 +1,4 @@
 import {
-  BriefcaseBusiness,
   BadgeDollarSign,
   CalendarCheck2,
   CalendarDays,
@@ -11,7 +10,6 @@ import {
   Mail,
   PlayCircle,
   Sparkles,
-  UserRound,
   Workflow,
 } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
@@ -50,8 +48,7 @@ export function Footer() {
         <div className="flex flex-col justify-between gap-10 lg:flex-row">
           <div className="max-w-sm">
             <Logo />
-            <p className="mt-4 text-sm text-muted">DA <em>One</em></p>
-            <p className="mt-2 text-sm leading-6 text-ink-2">
+            <p className="mt-4 text-sm leading-6 text-ink-2">
               Ask your data. Get the report.
             </p>
             <p className="mt-4 text-sm">
@@ -147,7 +144,7 @@ export function Footer() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <UserRound size={14} /> CEO
+                    <Linkedin size={14} className="text-amber-500" aria-hidden="true" /> CEO
                   </a>
                 </li>
                 <li>
@@ -157,7 +154,7 @@ export function Footer() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <BriefcaseBusiness size={14} /> BD 
+                    <Linkedin size={14} className="text-muted" aria-hidden="true" /> BD
                   </a>
                 </li>
                 <li>

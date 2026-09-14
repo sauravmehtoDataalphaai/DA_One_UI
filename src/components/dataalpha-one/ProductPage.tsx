@@ -22,7 +22,6 @@ import { Navbar } from "@/components/dataalpha-one/Navbar";
 import { Footer } from "@/components/dataalpha-one/Footer";
 import { PricingSection } from "@/components/dataalpha-one/PricingPage";
 import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
 import { Container, Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { DataFlowBackground } from "@/components/ui/DataFlowBackground";
@@ -89,7 +88,6 @@ export function ProductPage() {
           <DataFlowBackground />
           <Container className="relative">
             <Reveal className="mx-auto max-w-3xl text-center">
-              <Badge className="mx-auto">DA One</Badge>
               <h1 className="mt-6 text-balance text-4xl font-semibold tracking-tight text-ink sm:text-5xl lg:text-[3.25rem] lg:leading-[1.1]">
                 One Enterprise Platform for{" "}
                 <em className="not-italic text-accent">Data, Analytics</em>{" "}

@@ -16,7 +16,7 @@ export function FinalCTA() {
             Ready to explore your data differently?
           </h2>
           <p className="mt-4 max-w-xl text-white/65">
-            See what DA <em>One</em> can do with your data.
+            See what DA One can do with your data.
           </p>
         </Reveal>
         <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2">

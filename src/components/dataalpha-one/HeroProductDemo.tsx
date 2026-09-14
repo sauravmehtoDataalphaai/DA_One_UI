@@ -71,7 +71,7 @@ export function HeroProductDemo() {
               <span className="rounded-full bg-accent px-2 py-0.5 text-[9px] font-bold tracking-[0.05em] text-white">
                 New
               </span>
-              Live dashboards now in DA <em>One</em>
+              Live dashboards now in DA One
               <ChevronRight size={12} aria-hidden="true" />
             </div>
 

@@ -43,7 +43,7 @@ export function DemoSection() {
         <Reveal>
           <SectionHeading
             invert
-            title={<>See DA <em>One</em> in action.</>}
+            title="See DA One in action."
             copy="A 30-second teaser for the booth, and a 3-minute walkthrough for a proper look."
           />
         </Reveal>
