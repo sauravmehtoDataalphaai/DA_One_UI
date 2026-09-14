@@ -2,6 +2,7 @@
 import { Eye, EyeOff, Sparkles } from "lucide-react";
 import { Navbar } from "@/components/dataalpha-one/Navbar";
 import { Footer } from "@/components/dataalpha-one/Footer";
+import { DataFlowBackground } from "@/components/ui/DataFlowBackground";
 import { cn } from "@/lib/cn";
 
 // Client-side fast check — backend validates authoritatively
@@ -216,8 +217,9 @@ export function LoginPage() {
   return (
     <div className="min-h-screen bg-canvas">
       <Navbar />
-      <main id="main" className="flex min-h-screen items-center justify-center px-4 pb-20 pt-28">
-        <div className="mx-auto w-full max-w-md"><LoginForm /></div>
+      <main id="main" className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 pb-20 pt-28">
+        <DataFlowBackground />
+        <div className="relative mx-auto w-full max-w-md"><LoginForm /></div>
       </main>
       <Footer />
     </div>
@@ -228,8 +230,9 @@ export function SignupPage() {
   return (
     <div className="min-h-screen bg-canvas">
       <Navbar />
-      <main id="main" className="flex min-h-screen items-center justify-center px-4 pb-20 pt-28">
-        <div className="mx-auto w-full max-w-md"><SignupForm /></div>
+      <main id="main" className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 pb-20 pt-28">
+        <DataFlowBackground />
+        <div className="relative mx-auto w-full max-w-md"><SignupForm /></div>
       </main>
       <Footer />
     </div>

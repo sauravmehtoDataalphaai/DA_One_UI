@@ -7,6 +7,8 @@ import { Footer } from "@/components/dataalpha-one/Footer";
 import { PrivacyPage, TermsPage } from "@/components/dataalpha-one/LegalPages";
 import { PricingPage, PricingSection } from "@/components/dataalpha-one/PricingPage";
 import { ProductPage } from "@/components/dataalpha-one/ProductPage";
+import { UseCasesPage } from "@/components/dataalpha-one/UseCasesPage";
+import { CaseStudyPage } from "@/components/dataalpha-one/CaseStudyPage";
 import { LoginPage, SignupPage } from "@/components/dataalpha-one/AuthPage";
 import { DashboardPage } from "@/components/dataalpha-one/DashboardPage";
 import { useHashPage } from "@/hooks/useHashPage";
@@ -20,6 +22,11 @@ export default function App() {
 
   if (window.location.pathname === "/dashboard") return <DashboardPage />;
   if (window.location.pathname === "/product") return <ProductPage />;
+  if (window.location.pathname === "/use-cases" || window.location.pathname === "/use-cases/") return <UseCasesPage />;
+  if (window.location.pathname.startsWith("/use-cases/")) {
+    const slug = window.location.pathname.replace("/use-cases/", "").replace(/\/$/, "");
+    return <CaseStudyPage slug={slug} />;
+  }
   if (window.location.pathname === "/pricing") return <PricingPage />;
   if (window.location.pathname === "/login") return <LoginPage />;
   if (window.location.pathname === "/signup") return <SignupPage />;

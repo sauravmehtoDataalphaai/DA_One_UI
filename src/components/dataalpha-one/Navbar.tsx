@@ -120,7 +120,7 @@ export function Navbar() {
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary">
           <a
             href="/product"
-            className="text-sm text-muted transition-colors hover:text-ink"
+            className="text-sm font-medium uppercase tracking-wide text-muted transition-colors hover:text-ink"
           >
             Product
           </a>
@@ -135,7 +135,7 @@ export function Navbar() {
             <button
               type="button"
               onClick={() => setUseCasesDropdownOpen((prev) => !prev)}
-              className="flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-ink focus:outline-none cursor-pointer"
+              className="flex items-center gap-1.5 text-sm font-medium uppercase tracking-wide text-muted transition-colors hover:text-ink focus:outline-none cursor-pointer"
               aria-expanded={useCasesDropdownOpen}
               aria-haspopup="true"
             >
@@ -177,6 +177,13 @@ export function Navbar() {
                       );
                     })}
                   </div>
+                  <a
+                    href="/use-cases"
+                    onClick={() => setUseCasesDropdownOpen(false)}
+                    className="mt-1 flex items-center justify-center rounded-lg border-t border-line px-2.5 py-2.5 text-[13px] font-medium text-accent transition-colors hover:bg-line/60"
+                  >
+                    View all industries
+                  </a>
                 </div>
               </div>
             )}
@@ -186,7 +193,7 @@ export function Navbar() {
             <a
               key={link.id}
               href={link.href}
-              className="text-sm text-muted transition-colors hover:text-ink"
+              className="text-sm font-medium uppercase tracking-wide text-muted transition-colors hover:text-ink"
             >
               {link.label}
             </a>
@@ -197,7 +204,7 @@ export function Navbar() {
             href="/login"
             size="sm"
             variant="ghost"
-            className="hidden sm:inline-flex"
+            className="hidden uppercase tracking-wide sm:inline-flex"
           >
             Log in
           </Button>
@@ -205,13 +212,13 @@ export function Navbar() {
             href="/signup"
             size="sm"
             variant="secondary"
-            className="hidden sm:inline-flex"
+            className="hidden uppercase tracking-wide sm:inline-flex"
           >
             Sign up
           </Button>
           <Button
             size="sm"
-            className="hidden sm:inline-flex"
+            className="hidden uppercase tracking-wide sm:inline-flex"
             onClick={() => {
               track("hero_cta_click", { source: "nav" });
               openBookingOrLead("demo");
@@ -281,6 +288,13 @@ export function Navbar() {
                       </a>
                     );
                   })}
+                  <a
+                    href="/use-cases"
+                    onClick={() => setOpen(false)}
+                    className="rounded-lg px-2 py-2 text-center text-sm font-medium text-accent transition-colors hover:bg-line/40"
+                  >
+                    View all industries
+                  </a>
                 </div>
               )}
             </div>
