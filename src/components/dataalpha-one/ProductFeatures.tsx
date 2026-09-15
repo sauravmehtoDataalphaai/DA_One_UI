@@ -1,8 +1,8 @@
 import {
-  FileSpreadsheet,
-  FileText,
+  Database,
+  FileDown,
   LayoutDashboard,
-  Layers,
+  LayoutGrid,
   MessageSquare,
   ShieldCheck,
 } from "lucide-react";
@@ -11,40 +11,39 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const features = [
   {
+    icon: Database,
+    title: "Any Data Source",
+    description: "Upload files or connect to databases, cloud apps and more.",
+  },
+  {
     icon: MessageSquare,
-    title: "Ask in plain English",
+    title: "Natural-Language Q&A",
     description:
-      "No SQL, no dashboards to learn. Type your question the way you'd ask a colleague and get an answer.",
-  },
-  {
-    icon: FileSpreadsheet,
-    title: "Upload Excel & PDF files",
-    description:
-      "Drop in spreadsheets and documents and DA One reads them directly — no data prep required.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Answers grounded in your data",
-    description:
-      "Every response is generated from what you upload. DA One won't invent numbers that aren't there.",
-  },
-  {
-    icon: Layers,
-    title: "Compare files & spot patterns",
-    description:
-      "Compare multiple files, surface trends, and find your top-performing categories in seconds.",
-  },
-  {
-    icon: FileText,
-    title: "Reports you can share",
-    description:
-      "Answers come back as clean, structured reports — headings, tables, and summaries ready to copy.",
+      "Ask questions in plain English and get instant, accurate answers from your data.",
   },
   {
     icon: LayoutDashboard,
-    title: "One workspace for your data",
+    title: "Prompt-Built Dashboards",
     description:
-      "Chat, dashboards, reports, data connections, and your semantic layer, all in one place.",
+      "Create interactive dashboards from a simple prompt — no coding required.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Verified Accuracy",
+    description:
+      "Built on trusted data handling and intelligent validation for reliable, enterprise-grade insights.",
+  },
+  {
+    icon: LayoutGrid,
+    title: "Arrange Your View",
+    description:
+      "Move, resize and reorganize dashboard tiles to fit your needs.",
+  },
+  {
+    icon: FileDown,
+    title: "Excel & PDF Export",
+    description:
+      "Download your dashboards in Excel or PDF and share them with your team or stakeholders.",
   },
 ];
 
@@ -56,8 +55,8 @@ export function ProductFeatures() {
           <SectionHeading
             align="center"
             eyebrow="Product features"
-            title="Everything you need to understand your data."
-            copy={"DA One turns your files into answers — ask a question, upload what you have, and get a report back."}
+            title="Your Data. Your Questions. Trusted Answers."
+            copy={"Connect any data source, ask questions in plain English, create dashboards with a simple prompt, and export presentation-ready insights independently."}
           />
         </Reveal>
         <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">

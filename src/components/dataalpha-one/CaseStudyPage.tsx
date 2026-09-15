@@ -9,7 +9,7 @@ import { track } from "@/lib/analytics";
 import { getCaseStudy } from "@/data/caseStudies";
 
 export function CaseStudyPage({ slug }: { slug: string }) {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(true);
   const study = getCaseStudy(slug);
 
   if (!study) {
@@ -69,7 +69,15 @@ export function CaseStudyPage({ slug }: { slug: string }) {
                     Book a 20-minute Demo
                     <ArrowRight size={16} />
                   </Button>
-                  <Button href="#full-case-study" variant="secondary">
+                  <Button
+                    variant="secondary"
+                    onClick={() => {
+                      setExpanded(true);
+                      document
+                        .getElementById("full-case-study")
+                        ?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                  >
                     Read full case study
                   </Button>
                 </div>

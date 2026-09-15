@@ -52,12 +52,12 @@ export function UseCasesPage() {
         </section>
 
         {/* Case study grid */}
-        <section id="case-studies" className="bg-canvas py-16 sm:py-20">
+        <section id="case-studies" className="bg-canvas sm:py-6">
           <Container>
             <Reveal>
               <div className="flex flex-col items-end justify-between gap-4 sm:flex-row">
                 <h2 className="text-balance text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
-                  Six industries. One decision layer.
+                  Diverse Datasets. One decision layer.
                 </h2>
                 <p className="max-w-sm text-[14px] leading-6 text-muted">
                   Each case study begins with an executive business question,

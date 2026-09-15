@@ -132,10 +132,9 @@ export function Navbar() {
             onMouseEnter={() => setUseCasesDropdownOpen(true)}
             onMouseLeave={() => setUseCasesDropdownOpen(false)}
           >
-            <button
-              type="button"
-              onClick={() => setUseCasesDropdownOpen((prev) => !prev)}
-              className="flex items-center gap-1.5 text-sm font-medium uppercase tracking-wide text-muted transition-colors hover:text-ink focus:outline-none cursor-pointer"
+            <a
+              href="/use-cases"
+              className="flex items-center gap-1.5 text-sm font-medium uppercase tracking-wide text-muted transition-colors hover:text-ink focus:outline-none"
               aria-expanded={useCasesDropdownOpen}
               aria-haspopup="true"
             >
@@ -147,7 +146,7 @@ export function Navbar() {
                   useCasesDropdownOpen && "rotate-180",
                 )}
               />
-            </button>
+            </a>
 
             {useCasesDropdownOpen && (
               <div className="absolute left-0 top-full pt-1.5 w-84 animate-in fade-in-0 zoom-in-95 duration-150">

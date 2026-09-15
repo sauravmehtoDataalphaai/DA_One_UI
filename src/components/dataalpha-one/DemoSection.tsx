@@ -1,10 +1,11 @@
-import { FileDown, Play } from "lucide-react";
+import { Play } from "lucide-react";
+// import { FileDown } from "lucide-react"; // unused while Flyer/Brochure buttons are commented out below
 import { Button } from "@/components/ui/Button";
 import { Container, Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { openBookingOrLead } from "@/lib/booking";
 import { track } from "@/lib/analytics";
-import { site } from "@/lib/site";
+// import { site } from "@/lib/site"; // unused while Flyer/Brochure buttons are commented out below
 
 function VideoSlot({
   url,
@@ -73,17 +74,15 @@ export function DemoSection() {
           >
             Book a 20-minute Demo
           </Button>
-          <Button
+          {/* <Button
             variant="secondary"
             className="border-white/20 bg-transparent text-white hover:bg-white/10"
-            href={site.pdf.flyer}
-            target="_blank"
-            rel="noreferrer"
+            href="/flyer"
           >
             <FileDown size={16} />
             Flyer
-          </Button>
-          <Button
+          </Button> */}
+          {/* <Button
             variant="secondary"
             className="border-white/20 bg-transparent text-white hover:bg-white/10"
             href={site.pdf.brochure}
@@ -92,7 +91,7 @@ export function DemoSection() {
           >
             <FileDown size={16} />
             Brochure
-          </Button>
+          </Button> */}
         </div>
       </Container>
     </section>

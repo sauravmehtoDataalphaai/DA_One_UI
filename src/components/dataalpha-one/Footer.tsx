@@ -4,13 +4,13 @@ import {
   CalendarDays,
   ContactRound,
   Database,
-  FileDown,
+  // FileDown, // unused while Flyer/Brochure links are commented out below
   Globe,
   Linkedin,
   Mail,
   PlayCircle,
   Sparkles,
-  Workflow,
+  // Workflow, // unused after the "How it works" footer link was removed
 } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
@@ -27,7 +27,6 @@ const groups = [
       { label: "Product", id: "ask", icon: Database },
       { label: "Product Features", id: "features", icon: Sparkles },
       { label: "Pricing", id: "pricing", href: "/pricing", icon: BadgeDollarSign },
-      { label: "How it works", id: "how-it-works", icon: Workflow },
       { label: "Demo", id: "demo", icon: PlayCircle },
     ],
   },
@@ -35,7 +34,7 @@ const groups = [
     title: "Event",
     links: [
       { label: "Seamless 2026", id: "event", icon: CalendarDays },
-      { label: "Book a meeting", id: "lead", icon: CalendarCheck2 },
+      { label: "Book a meeting", id: "lead", href: "https://cal.com/meetdaone/20min", icon: CalendarCheck2 },
       { label: "Contact", id: "lead", icon: ContactRound },
     ],
   },
@@ -97,6 +96,9 @@ export function Footer() {
                           <a
                             href={link.href}
                             className="inline-flex items-center gap-1.5 text-sm text-ink-2 hover:text-ink"
+                            {...(link.href.startsWith("http")
+                              ? { target: "_blank", rel: "noreferrer" }
+                              : {})}
                           >
                             <Icon size={14} />
                             <span>{link.label}</span>
@@ -157,17 +159,15 @@ export function Footer() {
                     <Linkedin size={14} className="text-muted" aria-hidden="true" /> BD
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a
                     className="inline-flex items-center gap-1.5 text-ink-2 hover:text-ink"
-                    href={site.pdf.flyer}
-                    target="_blank"
-                    rel="noreferrer"
+                    href="/flyer"
                   >
                     <FileDown size={14} /> Flyer
                   </a>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <a
                     className="inline-flex items-center gap-1.5 text-ink-2 hover:text-ink"
                     href={site.pdf.brochure}
@@ -176,7 +176,7 @@ export function Footer() {
                   >
                     <FileDown size={14} /> Brochure
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

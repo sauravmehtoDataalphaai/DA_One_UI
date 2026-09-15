@@ -9,6 +9,7 @@ import { PricingPage, PricingSection } from "@/components/dataalpha-one/PricingP
 import { ProductPage } from "@/components/dataalpha-one/ProductPage";
 import { UseCasesPage } from "@/components/dataalpha-one/UseCasesPage";
 import { CaseStudyPage } from "@/components/dataalpha-one/CaseStudyPage";
+import { FlyerPage } from "@/components/dataalpha-one/FlyerPage";
 import { LoginPage, SignupPage } from "@/components/dataalpha-one/AuthPage";
 import { DashboardPage } from "@/components/dataalpha-one/DashboardPage";
 import { useHashPage } from "@/hooks/useHashPage";
@@ -27,6 +28,7 @@ export default function App() {
     const slug = window.location.pathname.replace("/use-cases/", "").replace(/\/$/, "");
     return <CaseStudyPage slug={slug} />;
   }
+  if (window.location.pathname === "/flyer") return <FlyerPage />;
   if (window.location.pathname === "/pricing") return <PricingPage />;
   if (window.location.pathname === "/login") return <LoginPage />;
   if (window.location.pathname === "/signup") return <SignupPage />;
