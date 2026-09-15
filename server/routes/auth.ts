@@ -4,6 +4,7 @@ import jwt from "jsonwebtoken";
 import { v4 as uuidv4 } from "uuid";
 import { db, type UserRow } from "../db.js";
 import { validateEmailFormat, validateEmailDomain, validatePassword } from "../validation.js";
+import { upsertHubspotContact } from "../hubspot.js";
 
 const router = Router();
 
@@ -44,10 +45,13 @@ router.post("/signup", async (req: Request, res: Response) => {
   ).run(id, fullName.trim(), email.trim().toLowerCase(), passwordHash, Date.now());
 
   const token = jwtSign(id);
-  return res.status(201).json({
+  res.status(201).json({
     token,
     user: { id, fullName: fullName.trim(), email: email.trim().toLowerCase() },
   });
+
+  // Fire-and-forget: never let a slow/unavailable HubSpot delay or fail signup.
+  void upsertHubspotContact(fullName.trim(), email.trim().toLowerCase());
 });
 
 // POST /api/auth/login

@@ -79,6 +79,7 @@ The Vite dev server proxies `/api/*` requests to the backend automatically (see 
 | `JWT_SECRET` | Secret used to sign auth tokens — **set your own value, do not reuse the example** |
 | `NVIDIA_API_KEY` / `NVIDIA_BASE_URL` / `NVIDIA_MODEL` | Credentials for the AI chat backend used by `/dashboard` |
 | `SMTP_HOST` / `SMTP_PORT` / `SMTP_SECURE` / `SMTP_USER` / `SMTP_PASS` / `SMTP_FROM` | Optional SMTP config; emails log to console when unset |
+| `HUBSPOT_ACCESS_TOKEN` | HubSpot private app access token; when set, new signups are synced to HubSpot as contacts. Skipped silently when unset |
 
 ## Routes
 
