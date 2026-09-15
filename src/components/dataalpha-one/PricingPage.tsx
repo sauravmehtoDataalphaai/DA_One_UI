@@ -24,14 +24,6 @@ const plans = [
     features: [
       "Connect any enterprise data source, databases",
       "Supports Excel, PDF data sources",
-
-      <span key="faster">
-        At least{" "}
-        <strong className="font-extrabold  [text-shadow:0_0_0.5px_currentColor]">
-          10× faster report creation
-        </strong>
-      </span>,
-
       "Ask business questions in natural language",
       "Get answers from live, refreshable data",
       "Generate SQL automatically",
@@ -40,24 +32,28 @@ const plans = [
       "Reports run without hallucination and token consumption",
       "Configure & create standard business reports in Excel, PDF",
       "Save & reuse reporting workflows",
-
-      <span key="private">
+      "Unlimited users",
+      "10 hours per month support",
+       "Enterprise Guardrails in place",
+      <span key="faster">
+        At least{" "}
+        <strong className="font-extrabold  [text-shadow:0_0_0.5px_currentColor]">
+          10× faster report creation
+        </strong>
+      </span>,
+       <span key="private">
         <strong className="font-extrabold  [text-shadow:0_0_0.5px_currentColor]">
           Connect privately without sharing your data with AI
         </strong>
       </span>,
-
-      "Enterprise Guardrails in place",
-
+     
       <span
         key="tokens"
-        className="rounded-md bg-[#b8a11e] px-1.5 py-0.5 font-extrabold text-white"
+        className="font-extrabold  [text-shadow:0_0_0.5px_currentColor]"
       >
-        20,000 tokens per month
+        2,000,000 tokens per month
       </span>,
-
-      "Unlimited users",
-      "10 hours per month support",
+      
     ],
   },
 
@@ -80,28 +76,25 @@ const plans = [
       "Role-based access & permissions",
       "Complete query & interaction audit trail",
       "Enterprise SQL safety controls & Guardrails",
-
+      "16 hours per month support",
+      "Configuration & customization by DataAlpha",
+      "Scale reporting workflows across teams",
       <span key="model-lockin">
         <strong className="font-extrabold text-white [text-shadow:0_0_0.5px_currentColor]">
           Choose your model with no AI model lock-in
         </strong>
       </span>,
-
       <span key="local-ai">
         <strong className="font-extrabold text-white [text-shadow:0_0_0.5px_currentColor]">
           Local AI Deployment option (no data sharing)
         </strong>
       </span>,
-
       <span key="on-prem">
         <strong className="font-extrabold text-white [text-shadow:0_0_0.5px_currentColor]">
           Private / on-prem deployment in your own environment
         </strong>
       </span>,
 
-      "16 hours per month support",
-      "Configuration & customization by DataAlpha",
-      "Scale reporting workflows across teams",
     ],
   },
 ];
