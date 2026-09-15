@@ -13,44 +13,95 @@ const formatPrice = (price: number) =>
 
 const plans = [
   {
-    name: "Plus",
-    description: "For everyday analysis, research, and creative projects",
+    name: "Monthly",
+    description:
+      "Enterprise data, analytics, and reporting with flexible monthly access",
     price: 7200,
     originalPrice: undefined,
     period: "/ month",
     href: "https://app.dataalpha.ai/settings/subscription?tier=Plus",
+    cta: "Start with Monthly",
     features: [
-      "20,000 credits monthly",
-      "Daily refresh credits",
-      "1 seat included",
-      "Connect your enterprise data",
-      "Ask questions in natural language",
+      "Connect any enterprise data source, databases",
+      "Supports Excel, PDF data sources",
+
+      <span key="faster">
+        At least{" "}
+        <strong className="font-extrabold text-white [text-shadow:0_0_0.5px_currentColor]">
+          10× faster report creation
+        </strong>
+      </span>,
+
+      "Ask business questions in natural language",
+      "Get answers from live, refreshable data",
       "Generate SQL automatically",
-      "Create reports on demand",
-      "Reuse reporting workflows",
-      "Access leading AI models",
+      "Configure exact reports/formats using AI",
+      "Use AI securely on sample data only to configure report",
+      "Reports run without hallucination and token consumption",
+      "Configure & create standard business reports in Excel, PDF",
+      "Save & reuse reporting workflows",
+
+      <span key="private">
+        <strong className="font-extrabold text-white [text-shadow:0_0_0.5px_currentColor]">
+          Connect privately without sharing your data with AI
+        </strong>
+      </span>,
+
+      "Enterprise Guardrails in place",
+
+      <span
+        key="tokens"
+        className="rounded-md bg-[#b8a11e] px-1.5 py-0.5 font-extrabold text-white"
+      >
+        20,000 tokens per month
+      </span>,
+
+      "Unlimited users",
+      "10 hours per month support",
     ],
   },
+
   {
-    name: "Pro",
-    description: "For advanced analysis and more ambitious creative work",
+    name: "Annual",
+    description:
+      "Advanced enterprise capabilities for teams ready to scale their reporting",
     price: 72000,
     originalPrice: 86400,
-    period: "/ yearly",
+    period: "/ year",
     href: "https://app.dataalpha.ai/settings/subscription?tier=Pro",
     featured: true,
+    cta: "Choose Annual & Save 16%",
     features: [
-      "50,000 credits monthly",
-      "Daily refresh credits",
-      "1 seat included",
-      "Real-time enterprise data access",
-      "Connect databases, APIs & data sources",
-      "AI-powered SQL generation",
-      "Enterprise reports on demand",
-      "Choose your preferred LLM",
-      "Private & on-prem deployment",
-      "Built around your workflows",
-      "Priority enterprise support",
+      "Everything included in Monthly",
+      "Connect databases, APIs & enterprise data sources",
+      "Build and scale for your growth and White label",
+      "Custom reports built around your business",
+      "Schedule Standardized reports",
+      "Role-based access & permissions",
+      "Complete query & interaction audit trail",
+      "Enterprise SQL safety controls & Guardrails",
+
+      <span key="model-lockin">
+        <strong className="font-extrabold text-white [text-shadow:0_0_0.5px_currentColor]">
+          Choose your model with no AI model lock-in
+        </strong>
+      </span>,
+
+      <span key="local-ai">
+        <strong className="font-extrabold text-white [text-shadow:0_0_0.5px_currentColor]">
+          Local AI Deployment option (no data sharing)
+        </strong>
+      </span>,
+
+      <span key="on-prem">
+        <strong className="font-extrabold text-white [text-shadow:0_0_0.5px_currentColor]">
+          Private / on-prem deployment in your own environment
+        </strong>
+      </span>,
+
+      "16 hours per month support",
+      "Configuration & customization by DataAlpha",
+      "Scale reporting workflows across teams",
     ],
   },
 ];
@@ -60,56 +111,128 @@ export function PricingSection() {
     <section id="pricing" className="bg-canvas py-20 sm:py-28">
       <Container>
         <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="mb-4 text-[12px] font-semibold tracking-[0.16em] text-accent uppercase">
+          <p className="mb-4 text-[12px] font-semibold uppercase tracking-[0.16em] text-accent">
             Simple pricing
           </p>
+
           <h2 className="text-balance text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
             Choose the plan that fits your work.
           </h2>
+
           <p className="mx-auto mt-5 max-w-xl text-[15px] leading-7 text-muted">
-            Start with the tools you need today and scale when your analysis gets more ambitious.
+            Start with the tools you need today and scale when your analysis
+            gets more ambitious.
           </p>
         </Reveal>
-        <div className="mx-auto mt-12 grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
+
+        <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2">
           {plans.map((plan, index) => (
-            <Reveal key={plan.name} delay={index * 0.08} className="h-full">
+            <Reveal
+              key={plan.name}
+              delay={index * 0.08}
+              className="h-full"
+            >
               <article
                 className={`relative flex h-full flex-col rounded-[18px] border p-6 shadow-card sm:p-8 ${
-                  plan.featured ? "border-accent bg-navy text-white" : "border-line-strong bg-card text-ink"
+                  plan.featured
+                    ? "border-accent bg-navy text-white"
+                    : "border-line-strong bg-card text-ink"
                 }`}
               >
                 {plan.featured && (
-                  <span className="absolute right-6 top-0 -translate-y-1/2 rounded-full bg-accent px-3 py-1 text-[10px] font-semibold tracking-[0.12em] text-white uppercase">
+                  <span className="absolute right-6 top-0 -translate-y-1/2 rounded-full bg-accent px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-white">
                     Recommended
                   </span>
                 )}
-                <div className="flex items-center gap-2">
+
+                <div className="flex flex-wrap items-center gap-2">
                   <h3 className="text-xl font-semibold">{plan.name}</h3>
-                  {plan.name === "Pro" && (
-                    <span className="rounded-full bg-accent px-2 py-1 text-[10px] font-semibold tracking-wide text-white uppercase">16% off</span>
-                  )}
-                </div>
-                <p className={`mt-3 min-h-12 text-sm leading-6 ${plan.featured ? "text-white/70" : "text-muted"}`}>
-                  {plan.description}
-                </p>
-                <div className="mt-6 flex items-baseline gap-1">
-                  <span className="text-4xl font-semibold tracking-tight">{formatPrice(plan.price)}</span>
-                  <span className={`text-sm ${plan.featured ? "text-white/65" : "text-muted"}`}>{plan.period}</span>
-                  {plan.originalPrice && (
-                    <span className={`ml-2 text-sm font-bold line-through ${plan.featured ? "text-white/45" : "text-muted"}`}>
-                      {formatPrice(plan.originalPrice)}
+
+                  {plan.name === "Annual" && (
+                    <span className="rounded-full bg-accent px-2 py-1 text-[10px] font-semibold uppercase tracking-wide text-white">
+                      16% off
                     </span>
                   )}
                 </div>
-                <Button href={plan.href} target="_blank" rel="noreferrer" variant={plan.featured ? "primary" : "secondary"} className="mt-7 w-full">
-                  Get started with {plan.name}
+
+                <p
+                  className={`mt-3 min-h-12 text-sm leading-6 ${
+                    plan.featured ? "text-white/70" : "text-muted"
+                  }`}
+                >
+                  {plan.description}
+                </p>
+
+                <div className="mt-6 flex flex-wrap items-center gap-3">
+                  <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                    <div className="flex items-baseline gap-1">
+                      <span className="text-4xl font-semibold tracking-tight">
+                        {formatPrice(plan.price)}
+                      </span>
+
+                      <span
+                        className={`text-sm ${
+                          plan.featured ? "text-white/65" : "text-muted"
+                        }`}
+                      >
+                        {plan.period}
+                      </span>
+                    </div>
+
+                    {plan.originalPrice && (
+                      <span
+                        className={`mt-4 text-sm font-bold line-through ${
+                          plan.featured ? "text-white/45" : "text-muted"
+                        }`}
+                      >
+                        {formatPrice(plan.originalPrice)}
+                      </span>
+                    )}
+                  </div>
+                </div>
+
+                <Button
+                  href={plan.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  variant={plan.featured ? "primary" : "secondary"}
+                  className="mt-7 w-full"
+                >
+                  {plan.cta}
                 </Button>
-                <div className={`mt-8 border-t pt-6 ${plan.featured ? "border-white/15" : "border-line"}`}>
-                  <p className={`mb-4 text-xs ${plan.featured ? "text-white/60" : "text-muted"}`}>Included with {plan.name}:</p>
+
+                <div
+                  className={`mt-8 border-t pt-6 ${
+                    plan.featured ? "border-white/15" : "border-line"
+                  }`}
+                >
+                  <p
+                    className={`mb-4 text-xs ${
+                      plan.featured ? "text-white/60" : "text-muted"
+                    }`}
+                  >
+                    Included with {plan.name}:
+                  </p>
+
                   <ul className="space-y-3">
-                    {plan.features.map((feature) => (
-                      <li key={feature} className="flex items-start gap-2 text-sm leading-5">
-                        <Check size={16} className={`mt-0.5 shrink-0 ${plan.featured ? "text-teal-300" : "text-success"}`} />
+                    {plan.features.map((feature, featureIndex) => (
+                      <li
+                        key={
+                          typeof feature === "string"
+                            ? feature
+                            : `feature-${plan.name}-${featureIndex}`
+                        }
+                        className="flex items-start gap-2 text-sm leading-5"
+                      >
+                        <Check
+                          size={16}
+                          className={`mt-0.5 shrink-0 ${
+                            plan.featured
+                              ? "text-teal-300"
+                              : "text-success"
+                          }`}
+                        />
+
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -128,23 +251,31 @@ export function PricingPage() {
   return (
     <div className="min-h-screen bg-canvas">
       <Navbar />
+
       <main id="main" className="pb-20 pt-28 sm:pt-36">
         <Container>
           <Reveal className="mx-auto max-w-2xl text-center">
-            <p className="mb-4 text-[12px] font-semibold tracking-[0.16em] text-accent uppercase">
+            <p className="mb-4 text-[12px] font-semibold uppercase tracking-[0.16em] text-accent">
               Simple pricing
             </p>
+
             <h1 className="text-balance text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
               Choose the plan that fits your work.
             </h1>
+
             <p className="mx-auto mt-5 max-w-xl text-[15px] leading-7 text-muted">
-              Start with the tools you need today and scale when your analysis gets more ambitious.
+              Start with the tools you need today and scale when your analysis
+              gets more ambitious.
             </p>
           </Reveal>
 
-          <div className="mx-auto mt-12 grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
+          <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2">
             {plans.map((plan, index) => (
-              <Reveal key={plan.name} delay={index * 0.08} className="h-full">
+              <Reveal
+                key={plan.name}
+                delay={index * 0.08}
+                className="h-full"
+              >
                 <article
                   className={`relative flex h-full flex-col rounded-[18px] border p-6 shadow-card sm:p-8 ${
                     plan.featured
@@ -153,42 +284,57 @@ export function PricingPage() {
                   }`}
                 >
                   {plan.featured && (
-                    <span className="absolute right-6 top-0 -translate-y-1/2 rounded-full bg-accent px-3 py-1 text-[10px] font-semibold tracking-[0.12em] text-white uppercase">
+                    <span className="absolute right-6 top-0 -translate-y-1/2 rounded-full bg-accent px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-white">
                       Recommended
                     </span>
                   )}
-                  <div className="flex items-center gap-2">
-  <h2 className="text-xl font-semibold">{plan.name}</h2>
-  {plan.name === "Pro" && (
-    <span className="rounded-full bg-accent px-2 py-1 text-[10px] font-semibold tracking-wide text-white uppercase">
-      16% off
-    </span>
-  )}
-</div>
-                  <p className={`mt-3 min-h-12 text-sm leading-6 ${plan.featured ? "text-white/70" : "text-muted"}`}>
+
+                  <div className="flex flex-wrap items-center gap-2">
+                    <h2 className="text-xl font-semibold">{plan.name}</h2>
+
+                    {plan.name === "Annual" && (
+                      <span className="rounded-full bg-accent px-2 py-1 text-[10px] font-semibold uppercase tracking-wide text-white">
+                        16% off
+                      </span>
+                    )}
+                  </div>
+
+                  <p
+                    className={`mt-3 min-h-12 text-sm leading-6 ${
+                      plan.featured ? "text-white/70" : "text-muted"
+                    }`}
+                  >
                     {plan.description}
                   </p>
+
                   <div className="mt-6 flex flex-wrap items-center gap-3">
                     <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
                       <div className="flex items-baseline gap-1">
-                        <span className="text-4xl font-semibold tracking-tight">{formatPrice(plan.price)}</span>
-                        <span className={`text-sm ${plan.featured ? "text-white/65" : "text-muted"}`}>
+                        <span className="text-4xl font-semibold tracking-tight">
+                          {formatPrice(plan.price)}
+                        </span>
+
+                        <span
+                          className={`text-sm ${
+                            plan.featured ? "text-white/65" : "text-muted"
+                          }`}
+                        >
                           {plan.period}
                         </span>
                       </div>
+
                       {plan.originalPrice && (
-                        <>
-                          <span
-  className={`flex items-center mt-4 text-sm font-bold line-through ${
-    plan.featured ? "text-white/45" : "text-muted"
-  }`}
->
-  {formatPrice(plan.originalPrice)}
-</span>
-                        </>
+                        <span
+                          className={`mt-4 text-sm font-bold line-through ${
+                            plan.featured ? "text-white/45" : "text-muted"
+                          }`}
+                        >
+                          {formatPrice(plan.originalPrice)}
+                        </span>
                       )}
                     </div>
                   </div>
+
                   <Button
                     href={plan.href}
                     target="_blank"
@@ -196,16 +342,41 @@ export function PricingPage() {
                     variant={plan.featured ? "primary" : "secondary"}
                     className="mt-7 w-full"
                   >
-                    Get started with {plan.name}
+                    {plan.cta}
                   </Button>
-                  <div className={`mt-8 border-t pt-6 ${plan.featured ? "border-white/15" : "border-line"}`}>
-                    <p className={`mb-4 text-xs ${plan.featured ? "text-white/60" : "text-muted"}`}>
+
+                  <div
+                    className={`mt-8 border-t pt-6 ${
+                      plan.featured ? "border-white/15" : "border-line"
+                    }`}
+                  >
+                    <p
+                      className={`mb-4 text-xs ${
+                        plan.featured ? "text-white/60" : "text-muted"
+                      }`}
+                    >
                       Included with {plan.name}:
                     </p>
+
                     <ul className="space-y-3">
-                      {plan.features.map((feature) => (
-                        <li key={feature} className="flex items-start gap-2 text-sm leading-5">
-                          <Check size={16} className={`mt-0.5 shrink-0 ${plan.featured ? "text-teal-300" : "text-success"}`} />
+                      {plan.features.map((feature, featureIndex) => (
+                        <li
+                          key={
+                            typeof feature === "string"
+                              ? feature
+                              : `feature-${plan.name}-${featureIndex}`
+                          }
+                          className="flex items-start gap-2 text-sm leading-5"
+                        >
+                          <Check
+                            size={16}
+                            className={`mt-0.5 shrink-0 ${
+                              plan.featured
+                                ? "text-teal-300"
+                                : "text-success"
+                            }`}
+                          />
+
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -217,6 +388,7 @@ export function PricingPage() {
           </div>
         </Container>
       </main>
+
       <Footer />
     </div>
   );
