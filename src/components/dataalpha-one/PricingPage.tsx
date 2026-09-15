@@ -27,7 +27,7 @@ const plans = [
 
       <span key="faster">
         At least{" "}
-        <strong className="font-extrabold [text-shadow:0_0_0.5px_currentColor]">
+        <strong className="font-extrabold  [text-shadow:0_0_0.5px_currentColor]">
           10× faster report creation
         </strong>
       </span>,
@@ -42,7 +42,7 @@ const plans = [
       "Save & reuse reporting workflows",
 
       <span key="private">
-        <strong className="font-extrabold [text-shadow:0_0_0.5px_currentColor]">
+        <strong className="font-extrabold  [text-shadow:0_0_0.5px_currentColor]">
           Connect privately without sharing your data with AI
         </strong>
       </span>,
