@@ -65,9 +65,9 @@ export function HeroProductDemo() {
           </div>
 
           {/* Main */}
-          <div className="flex flex-col items-center px-4 py-10 sm:px-8 sm:py-14">
+          <div className="flex flex-col items-center px-4 py-7 sm:px-6 sm:py-9">
             {/* Pill badge */}
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-accent-soft px-3 py-1.5 text-[12px] font-medium text-accent sm:text-[12.5px]">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-accent-soft px-3 py-1.5 text-[11px] font-medium text-accent sm:text-[12px]">
               <span className="rounded-full bg-accent px-2 py-0.5 text-[9px] font-bold tracking-[0.05em] text-white">
                 New
               </span>
@@ -76,14 +76,14 @@ export function HeroProductDemo() {
             </div>
 
             {/* Heading */}
-            <h1 className="mb-8 max-w-[500px] text-center text-[28px] font-medium leading-[1.2] tracking-[-0.01em] text-ink sm:text-[36px]">
+            <h1 className="mb-6 max-w-[440px] text-center text-[22px] font-medium leading-[1.2] tracking-[-0.01em] text-ink sm:text-[28px]">
               What would you like to{" "}
               <em className="italic text-accent">explore</em>{" "}
               today?
             </h1>
 
             {/* Composer */}
-            <div className="w-full max-w-[600px] rounded-[20px] border border-line-strong bg-card px-4 pb-3 pt-4 shadow-[0_18px_40px_rgb(20_30_25/0.06)] sm:px-5">
+            <div className="w-full max-w-[560px] rounded-[18px] border border-line-strong bg-card px-3.5 pb-2.5 pt-3.5 shadow-[0_18px_40px_rgb(20_30_25/0.06)] sm:px-4">
               <textarea
                 rows={1}
                 value={query}
@@ -96,27 +96,27 @@ export function HeroProductDemo() {
                   }
                 }}
                 placeholder="Show me revenue growth by region for the last 6 months..."
-                className="w-full resize-none border-none bg-transparent text-[14px] text-ink outline-none placeholder:text-muted sm:text-[15px]"
+                className="w-full resize-none border-none bg-transparent text-[13.5px] text-ink outline-none placeholder:text-muted sm:text-[14px]"
               />
-              <div className="mt-3 flex items-center justify-between">
+              <div className="mt-2.5 flex items-center justify-between">
                 <div className="flex items-center gap-1.5">
                   <button
                     type="button"
                     title="Attach"
-                    className="flex size-8 items-center justify-center rounded-[8px] text-muted transition-colors hover:bg-canvas-2 hover:text-ink"
+                    className="flex size-7 items-center justify-center rounded-[8px] text-muted transition-colors hover:bg-canvas-2 hover:text-ink"
                   >
-                    <Plus size={17} aria-hidden="true" />
+                    <Plus size={16} aria-hidden="true" />
                   </button>
                   <button
                     type="button"
-                    className="flex items-center gap-1.5 rounded-[8px] border border-line px-2.5 py-1.5 text-[12px] font-medium text-muted transition-colors hover:border-line-strong hover:text-ink-2"
+                    className="flex items-center gap-1.5 rounded-[8px] border border-line px-2 py-1 text-[11px] font-medium text-muted transition-colors hover:border-line-strong hover:text-ink-2"
                   >
-                    <BarChart3 size={12} aria-hidden="true" />
+                    <BarChart3 size={11} aria-hidden="true" />
                     Reasoning
                   </button>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="hidden items-center gap-1 text-[12px] font-medium text-ink-2 sm:flex">
+                  <span className="hidden items-center gap-1 text-[11px] font-medium text-ink-2 sm:flex">
                     DataAlpha 1.0
                     <ChevronDown size={12} aria-hidden="true" />
                   </span>
@@ -127,34 +127,34 @@ export function HeroProductDemo() {
                       track("ask_demo_submit", { draft: query });
                       setShowAuth(true);
                     }}
-                    className="flex size-8 items-center justify-center rounded-full bg-accent text-white transition-colors hover:bg-accent-2"
+                    className="flex size-7 items-center justify-center rounded-full bg-accent text-white transition-colors hover:bg-accent-2"
                   >
-                    <ArrowUp size={15} aria-hidden="true" />
+                    <ArrowUp size={14} aria-hidden="true" />
                   </button>
                 </div>
               </div>
             </div>
 
             {/* Quick chips */}
-            <div className="mt-5 flex flex-wrap justify-center gap-2">
+            <div className="mt-4 flex flex-wrap justify-center gap-1.5">
               {quickChips.map(({ label, Icon, isNew }) => (
                 <button
                   key={label}
                   type="button"
-                  className="flex items-center gap-1.5 rounded-full border border-line bg-card px-3.5 py-2 text-[13px] font-medium text-ink-2 transition-colors hover:border-accent hover:bg-accent-soft hover:text-accent"
+                  className="flex items-center gap-1.5 rounded-full border border-line bg-card px-3 py-1.5 text-[12px] font-medium text-ink-2 transition-colors hover:border-accent hover:bg-accent-soft hover:text-accent"
                 >
                   {isNew && (
                     <span className="rounded-[5px] bg-accent-soft px-1.5 py-0.5 text-[9px] font-bold tracking-[0.03em] text-accent">
                       New
                     </span>
                   )}
-                  <Icon size={13} aria-hidden="true" />
+                  <Icon size={12} aria-hidden="true" />
                   {label}
                 </button>
               ))}
               <button
                 type="button"
-                className="flex items-center gap-1 rounded-full border border-line bg-card px-3.5 py-2 text-[13px] font-medium text-ink-2 transition-colors hover:border-accent hover:bg-accent-soft hover:text-accent"
+                className="flex items-center gap-1 rounded-full border border-line bg-card px-3 py-1.5 text-[12px] font-medium text-ink-2 transition-colors hover:border-accent hover:bg-accent-soft hover:text-accent"
               >
                 More
                 <ChevronDown size={12} aria-hidden="true" />
