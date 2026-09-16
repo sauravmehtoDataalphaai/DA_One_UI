@@ -270,6 +270,92 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
   },
+  {
+    slug: "real-estate",
+    industry: "Real Estate",
+    title: "Turning Fragmented Property & Investment Data into Portfolio-Level Performance Intelligence",
+    summary:
+      "A UAE-based real estate investment and operating platform used DA One to unify property, leasing, valuation, debt and finance data and identify which assets were actually creating economic value.",
+    image: "/use-cases/real-estate.svg",
+    datasetImage: "/use-cases/real-estate.svg",
+    cardMetrics: [
+      { value: "86% → 90%", label: "Portfolio occupancy" },
+      { value: "60.8% → 56.9%", label: "Portfolio NOI margin" },
+    ],
+    metrics: [
+      { value: "AED 7.2B", label: "Gross asset value" },
+      { value: "86% → 90%", label: "Portfolio occupancy" },
+      { value: "60.8% → 56.9%", label: "Portfolio NOI margin" },
+      { value: "40 hrs → 4 hrs", label: "Reporting cycle" },
+    ],
+    executiveAsk:
+      "Which assets are growing revenue but reducing NOI and risk-adjusted returns after concessions, operating expenses, CapEx, financing costs and vacancy risk are considered?",
+    sections: [
+      {
+        heading: "The operating context",
+        body: "A UAE-based real estate investment and operating platform managing approximately AED 7.2B in gross asset value across residential, office, retail, hospitality and mixed-use assets in the GCC was managing property operations, leasing, valuations, debt, CapEx, facilities and finance data across multiple disconnected systems.",
+      },
+      {
+        heading: "The challenge",
+        body: "Portfolio occupancy had improved from 86% to 90% and property revenue was growing 14% YoY, yet portfolio NOI margin had declined from 60.8% to 56.9%. At the same time, asset-level return expectations were coming under pressure as operating expenses, financing costs and unplanned CapEx increased. Management could see revenue growth — but not consistently determine which assets were actually creating economic value.",
+      },
+      {
+        heading: "How DA One connected the decision layer",
+        body: "With DA One, property-management, leasing, valuation, CapEx, debt, operating and finance data was unified into one customized Data, Analytics and Reporting layer. The analysis showed that four assets accounted for 71% of the portfolio's NOI-margin deterioration, while controllable operating expenses had increased 16%, CapEx exceeded plan by 23% across two assets, and financing costs had risen disproportionately within one asset cluster.",
+      },
+      {
+        heading: "Reporting efficiency",
+        body: "A portfolio-reporting process that previously required approximately 40 hours of extraction, reconciliation, asset-level analysis and preparation was reduced to approximately 4 hours — a 10× improvement in reporting efficiency.",
+      },
+      {
+        heading: "Modeled outcomes",
+        body: "Modeled actions helped identify approximately AED 2.4M in annual controllable cost leakage, prioritize CapEx toward higher-return assets, support portfolio NOI-margin recovery toward 59.8%, and improve projected IRR for underperforming assets toward 12.0%.",
+      },
+    ],
+  },
+  {
+    slug: "asset-management",
+    industry: "Asset Management",
+    title: "Turning Fragmented Fund, Portfolio & Investor Data into Decision-Ready Investment Intelligence",
+    summary:
+      "A UAE-based alternative asset manager used DA One to unify portfolio, valuation, exposure, investor and risk data and identify which funds were increasing concentration and reporting risk.",
+    image: "/use-cases/asset-management.svg",
+    datasetImage: "/use-cases/asset-management.svg",
+    cardMetrics: [
+      { value: "AED 12B", label: "Assets under management" },
+      { value: "31% → 37%", label: "Top-10 concentration" },
+    ],
+    metrics: [
+      { value: "AED 12B", label: "Assets under management" },
+      { value: "23%", label: "YoY AUM growth" },
+      { value: "31% → 37%", label: "Top-10 concentration" },
+      { value: "40 hrs → 4 hrs", label: "Reporting cycle" },
+    ],
+    executiveAsk:
+      "Which funds and strategies are generating returns, but increasing concentration, liquidity or reporting risk once exposures, valuation timing, leverage and cash requirements are considered?",
+    sections: [
+      {
+        heading: "The operating context",
+        body: "A UAE-based alternative asset manager overseeing approximately AED 12B in AUM across Private Credit, Private Equity and Real Assets was managing portfolio, valuation, exposure, investor, accounting and risk data across fund administrators, custodians, portfolio systems, internal databases and spreadsheets.",
+      },
+      {
+        heading: "The challenge",
+        body: "AUM had increased 23% YoY, while the number of funds and investment vehicles had expanded from 7 to 10. Investment performance remained healthy, but management visibility was becoming more difficult as portfolio complexity increased. Top-10 portfolio concentration had risen from 31% to 37%, and investment, risk and investor-reporting teams were frequently reconciling different versions of the same exposure and performance data.",
+      },
+      {
+        heading: "How DA One connected the decision layer",
+        body: "With DA One, portfolio, fund-administration, valuation, accounting, investor and risk data was unified into one customized Data, Analytics and Reporting layer. The analysis showed that three funds accounted for 68% of the increase in portfolio concentration, while approximately 14% of portfolio and valuation records required recurring manual reconciliation, and liquidity visibility differed materially across two investment strategies.",
+      },
+      {
+        heading: "Reporting efficiency",
+        body: "A management and investor-reporting process that previously required approximately 40 hours of extraction, reconciliation, validation and analysis was reduced to approximately 4 hours — a 10× improvement in reporting efficiency.",
+      },
+      {
+        heading: "Modeled outcomes",
+        body: "Modeled actions helped reduce reporting and reconciliation exceptions by approximately 60%, identify approximately AED 1.5M in annual operational-efficiency opportunity, improve same-day visibility across the investment portfolio, and support reduction of top-10 concentration toward 33% while preserving portfolio return objectives.",
+      },
+    ],
+  },
 ];
 
 export function getCaseStudy(slug: string): CaseStudy | undefined {

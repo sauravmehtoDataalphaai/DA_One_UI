@@ -8,6 +8,8 @@ import {
   ShoppingCart,
   Store,
   Hotel,
+  Building2,
+  BriefcaseBusiness,
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/Button";
@@ -53,6 +55,20 @@ const useCases = [
     description: "Analyze bookings, revenue, and guest performance",
     href: "/use-cases/hospitality",
     icon: Hotel,
+  },
+  {
+    title: "Real Estate",
+    description:
+      "Turn fragmented property and investment data into portfolio-level performance intelligence",
+    href: "/use-cases/real-estate",
+    icon: Building2,
+  },
+  {
+    title: "Asset Management",
+    description:
+      "Turn fragmented fund, portfolio, and investor data into decision-ready investment intelligence",
+    href: "/use-cases/asset-management",
+    icon: BriefcaseBusiness,
   },
 ];
 
@@ -132,9 +148,10 @@ export function Navbar() {
             onMouseEnter={() => setUseCasesDropdownOpen(true)}
             onMouseLeave={() => setUseCasesDropdownOpen(false)}
           >
-            <a
-              href="/use-cases"
-              className="flex items-center gap-1.5 text-sm font-medium uppercase tracking-wide text-muted transition-colors hover:text-ink focus:outline-none"
+            <button
+              type="button"
+              onClick={() => setUseCasesDropdownOpen((prev) => !prev)}
+              className="flex items-center gap-1.5 text-sm font-medium uppercase tracking-wide text-muted transition-colors hover:text-ink focus:outline-none cursor-pointer"
               aria-expanded={useCasesDropdownOpen}
               aria-haspopup="true"
             >
@@ -146,7 +163,7 @@ export function Navbar() {
                   useCasesDropdownOpen && "rotate-180",
                 )}
               />
-            </a>
+            </button>
 
             {useCasesDropdownOpen && (
               <div className="absolute left-0 top-full pt-1.5 w-84 animate-in fade-in-0 zoom-in-95 duration-150">
