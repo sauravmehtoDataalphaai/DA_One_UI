@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+// import { lazy, Suspense } from "react"; // unused while DemoSection is commented out below
 import { Navbar } from "@/components/dataalpha-one/Navbar";
 import { Hero } from "@/components/dataalpha-one/Hero";
 import { ProductFeatures } from "@/components/dataalpha-one/ProductFeatures";
@@ -14,9 +14,9 @@ import { LoginPage, SignupPage } from "@/components/dataalpha-one/AuthPage";
 import { DashboardPage } from "@/components/dataalpha-one/DashboardPage";
 import { useHashPage } from "@/hooks/useHashPage";
 
-const DemoSection = lazy(() =>
-  import("@/components/dataalpha-one/DemoSection").then((m) => ({ default: m.DemoSection })),
-);
+// const DemoSection = lazy(() =>
+//   import("@/components/dataalpha-one/DemoSection").then((m) => ({ default: m.DemoSection })),
+// );
 
 export default function App() {
   const page = useHashPage();
@@ -48,9 +48,9 @@ export default function App() {
         <Hero />
         <ProductFeatures />
         <PricingSection />
-        <Suspense fallback={<div className="h-24" />}>
+        {/* <Suspense fallback={<div className="h-24" />}>
           <DemoSection />
-        </Suspense>
+        </Suspense> */}
         <FinalCTA />
       </main>
       <Footer />

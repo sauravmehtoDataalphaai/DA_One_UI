@@ -21,54 +21,44 @@ import { track } from "@/lib/analytics";
 
 const useCases = [
   {
+    title: "Asset Management",
+    href: "/use-cases/asset-management",
+    icon: BriefcaseBusiness,
+  },
+  {
+    title: "Real Estate",
+    href: "/use-cases/real-estate",
+    icon: Building2,
+  },
+  {
     title: "Fintech",
-    description: "Optimize financial workflows and analyze business data",
     href: "/use-cases/fintech",
     icon: Coins,
   },
   {
     title: "Payments",
-    description: "Analyze transactions, payments, and performance",
     href: "/use-cases/payments",
     icon: CreditCard,
   },
   {
     title: "Logistics",
-    description: "Manage logistics and track operations",
     href: "/use-cases/logistics",
     icon: Truck,
   },
   {
     title: "Ecommerce",
-    description: "Analyze ecommerce sales, customers, and performance",
     href: "/use-cases/ecommerce",
     icon: ShoppingCart,
   },
   {
     title: "Retail",
-    description: "Track retail performance, sales, and customer trends",
     href: "/use-cases/retail",
     icon: Store,
   },
   {
     title: "Hospitality",
-    description: "Analyze bookings, revenue, and guest performance",
     href: "/use-cases/hospitality",
     icon: Hotel,
-  },
-  {
-    title: "Real Estate",
-    description:
-      "Turn fragmented property and investment data into portfolio-level performance intelligence",
-    href: "/use-cases/real-estate",
-    icon: Building2,
-  },
-  {
-    title: "Asset Management",
-    description:
-      "Turn fragmented fund, portfolio, and investor data into decision-ready investment intelligence",
-    href: "/use-cases/asset-management",
-    icon: BriefcaseBusiness,
   },
 ];
 
@@ -166,7 +156,7 @@ export function Navbar() {
             </button>
 
             {useCasesDropdownOpen && (
-              <div className="absolute left-0 top-full pt-1.5 w-84 animate-in fade-in-0 zoom-in-95 duration-150">
+              <div className="absolute left-0 top-full pt-1.5 w-56 animate-in fade-in-0 zoom-in-95 duration-150">
                 <div className="rounded-xl border border-line bg-canvas/95 p-2 shadow-xl backdrop-blur-md">
                   <div className="grid gap-1">
                     {useCases.map((item) => {
@@ -176,18 +166,13 @@ export function Navbar() {
                           key={item.title}
                           href={item.href}
                           onClick={() => setUseCasesDropdownOpen(false)}
-                          className="group flex items-start gap-3 rounded-lg p-2.5 transition-colors hover:bg-line/60"
+                          className="group flex items-center gap-3 rounded-lg p-2.5 transition-colors hover:bg-line/60"
                         >
                           <div className="flex size-9 shrink-0 items-center justify-center rounded-lg border border-line/80 bg-canvas/80 text-muted transition-colors group-hover:border-line group-hover:text-ink">
                             <Icon size={18} />
                           </div>
-                          <div>
-                            <div className="text-sm font-medium text-ink">
-                              {item.title}
-                            </div>
-                            <div className="text-xs text-muted">
-                              {item.description}
-                            </div>
+                          <div className="text-sm font-medium text-ink">
+                            {item.title}
                           </div>
                         </a>
                       );
@@ -297,10 +282,7 @@ export function Navbar() {
                         <div className="flex size-8 shrink-0 items-center justify-center rounded-md border border-line/80 bg-canvas text-muted">
                           <Icon size={16} />
                         </div>
-                        <div>
-                          <div className="text-sm font-medium text-ink">{item.title}</div>
-                          <div className="text-xs text-muted">{item.description}</div>
-                        </div>
+                        <div className="text-sm font-medium text-ink">{item.title}</div>
                       </a>
                     );
                   })}
