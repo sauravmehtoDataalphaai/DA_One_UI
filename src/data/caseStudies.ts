@@ -4,6 +4,7 @@ export type CaseStudy = {
   title: string;
   summary: string;
   image: string;
+  datasetImage: string;
   cardMetrics: { value: string; label: string }[];
   metrics: { value: string; label: string }[];
   executiveAsk: string;
@@ -18,6 +19,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "A UAE-based omnichannel ecommerce company used DA One to connect commerce, marketing, operations and finance data so management could identify where GMV growth was eroding contribution margin.",
     image: "/use-cases/ecommerce.webp",
+    datasetImage: "/use-cases/Ecommerce_Dataset.png",
     cardMetrics: [
       { value: "AED 420M", label: "Annual GMV" },
       { value: "18%", label: "YoY GMV growth" },
@@ -60,6 +62,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "A UAE-based digital lending and embedded-finance company used DA One to unify lending, risk, collections, fraud, CRM and finance data for faster, risk-aware management decisions.",
     image: "/use-cases/fintech.webp",
+    datasetImage: "/use-cases/Fintech_Dataset.png",
     cardMetrics: [
       { value: "41% → 47%", label: "Approval rate" },
       { value: "5.8% → 7.1%", label: "30+ DPD delinquency" },
@@ -102,6 +105,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "A UAE-based payment service provider used DA One to connect transaction, merchant, fraud, settlement and finance data and surface where TPV growth was weakening net margin.",
     image: "/use-cases/payments.webp",
+    datasetImage: "/use-cases/Payments_Dataset.png",
     cardMetrics: [
       { value: "AED 9.5B", label: "Annual TPV" },
       { value: "24%", label: "YoY TPV growth" },
@@ -144,6 +148,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "A UAE-based omnichannel retailer used DA One to unify POS, inventory, loyalty, workforce, ecommerce and finance data and identify the store-category combinations driving margin deterioration.",
     image: "/use-cases/retail.webp",
+    datasetImage: "/use-cases/RETAIL_DATASET.png",
     cardMetrics: [
       { value: "12%", label: "YoY sales growth" },
       { value: "36.4% → 33.9%", label: "Gross margin" },
@@ -186,6 +191,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "A UAE-based hospitality group used DA One to unify property, channel, guest, operational and finance data so management could see the full profitability impact of occupancy, channel mix and operating costs.",
     image: "/use-cases/hospitality.webp",
+    datasetImage: "/use-cases/HOSPITALITY_Dataset.png",
     cardMetrics: [
       { value: "74% → 79%", label: "Occupancy" },
       { value: "31.6% → 28.9%", label: "GOP margin" },
@@ -228,6 +234,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "A UAE-based freight forwarder and 3PL used DA One to connect operational, commercial, carrier and finance data and expose where shipment growth was weakening margin and service performance.",
     image: "/use-cases/logistics.webp",
+    datasetImage: "/use-cases/Logistics_Dataset.png",
     cardMetrics: [
       { value: "16%", label: "YoY shipment growth" },
       { value: "24.8% → 21.9%", label: "GP margin" },

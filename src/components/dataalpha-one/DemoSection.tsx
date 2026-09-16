@@ -9,13 +9,24 @@ import { track } from "@/lib/analytics";
 
 function VideoSlot({
   url,
+  gifUrl,
   title,
   note,
 }: {
   url?: string;
+  gifUrl?: string;
   title: string;
   note: string;
 }) {
+  if (gifUrl) {
+    return (
+      <img
+        src={gifUrl}
+        alt={title}
+        className="aspect-video w-full object-cover"
+      />
+    );
+  }
   if (url) {
     return (
       <video className="aspect-video w-full" controls preload="none" onPlay={() => track("demo_play")}>
@@ -52,6 +63,7 @@ export function DemoSection() {
           <div className="overflow-hidden rounded-[24px] border border-white/10 bg-white/[0.04]">
             <VideoSlot
               url={teaserUrl}
+              gifUrl="/gif/DAOne_Gif.gif"
               title="30-second teaser"
               note="Add VITE_TEASER_VIDEO_URL when the file is ready."
             />
@@ -59,6 +71,7 @@ export function DemoSection() {
           <div className="overflow-hidden rounded-[24px] border border-white/10 bg-white/[0.04]">
             <VideoSlot
               url={videoUrl}
+              gifUrl="/gif/DAOne_Gif1.gif"
               title="3-minute demo"
               note="Add VITE_DEMO_VIDEO_URL when the recording is ready."
             />

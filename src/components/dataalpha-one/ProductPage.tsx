@@ -217,7 +217,7 @@ export function ProductPage() {
                   </h3>
                   <ul className="mt-4 space-y-3">
                     {configureAround.map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-sm leading-5 text-ink-2">
+                      <li key={item} className="flex items-start gap-2 text-md leading-5 text-ink-2">
                         <Check size={16} className="mt-0.5 shrink-0 text-success" aria-hidden="true" />
                         <span>{item}</span>
                       </li>
@@ -232,7 +232,7 @@ export function ProductPage() {
                   </h3>
                   <ul className="mt-4 space-y-3">
                     {reportingSupport.map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-sm leading-5 text-ink-2">
+                      <li key={item} className="flex items-start gap-2 text-md leading-5 text-ink-2">
                         <Check size={16} className="mt-0.5 shrink-0 text-success" aria-hidden="true" />
                         <span>{item}</span>
                       </li>

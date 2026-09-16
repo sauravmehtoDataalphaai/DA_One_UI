@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight, Download } from "lucide-react";
 import { Navbar } from "@/components/dataalpha-one/Navbar";
 import { Footer } from "@/components/dataalpha-one/Footer";
 import { Button } from "@/components/ui/Button";
@@ -83,11 +83,11 @@ export function CaseStudyPage({ slug }: { slug: string }) {
                 </div>
               </Reveal>
               <Reveal delay={0.08}>
-                <div className="aspect-video overflow-hidden rounded-[20px] border border-line-strong bg-canvas-2 shadow-card">
+                <div className="aspect-video overflow-hidden rounded-[20px]">
                   <img
-                    src={study.image}
-                    alt={`${study.industry} DA One case study`}
-                    className="h-full w-full object-cover"
+                    src={study.datasetImage}
+                    alt={`${study.industry} DA One case study dataset`}
+                    className="h-full w-full object-contain"
                   />
                 </div>
               </Reveal>
@@ -157,6 +157,16 @@ export function CaseStudyPage({ slug }: { slug: string }) {
                             </p>
                           </div>
                         ))}
+                        <div className="mt-6 border-t border-line pt-6">
+                          <a
+                            href={study.image}
+                            download
+                            className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent hover:text-accent-2"
+                          >
+                            <Download size={14} aria-hidden="true" />
+                            Download case study image
+                          </a>
+                        </div>
                       </div>
                     )}
                   </div>

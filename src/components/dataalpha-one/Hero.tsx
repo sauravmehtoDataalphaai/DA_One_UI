@@ -6,14 +6,17 @@ export function Hero() {
   return (
     <section id="top" className="relative overflow-hidden bg-canvas pb-12 pt-20 sm:pb-16 sm:pt-24">
       <DataFlowBackground />
-      <Container className="relative">
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-[7fr_3fr] md:items-stretch md:gap-5">
+      <Container className="relative max-w-[1200px] xl:max-w-[1400px] 2xl:max-w-[1600px]">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-[minmax(0,1fr)_minmax(0,0.75fr)] md:items-stretch md:gap-10">
           <HeroProductDemo />
-          <div className="flex items-center justify-center overflow-visible bg-transparent shadow-none md:self-center">
+          <div
+            className="flex items-center justify-center overflow-visible rounded-[20px] bg-transparent md:self-center"
+            style={{ boxShadow: "0 0 70px 18px color-mix(in srgb, var(--color-accent) 22%, transparent)" }}
+          >
             <img
               src="/gif/DAOne_Gif.gif"
               alt="DA One live product preview"
-              className="w-full object-contain 2xl:scale-125"
+              className="w-full rounded-[20px] object-contain md:h-full"
             />
           </div>
         </div>

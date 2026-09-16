@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   BadgeDollarSign,
   CalendarCheck2,
@@ -8,13 +9,13 @@ import {
   Globe,
   Linkedin,
   Mail,
-  PlayCircle,
   Sparkles,
   // Workflow, // unused after the "How it works" footer link was removed
 } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Reveal";
+import { SeamlessEventModal } from "@/components/ui/SeamlessEventModal";
 import { openBookingOrLead } from "@/lib/booking";
 import { scrollToId } from "@/lib/scroll";
 import { track } from "@/lib/analytics";
@@ -24,10 +25,9 @@ const groups = [
   {
     title: "Product",
     links: [
-      { label: "Product", id: "ask", icon: Database },
-      { label: "Product Features", id: "features", icon: Sparkles },
+      { label: "Product", id: "ask", href: "/product", icon: Database },
+      { label: "Use Cases", id: "use-cases", href: "/use-cases", icon: Sparkles },
       { label: "Pricing", id: "pricing", href: "/pricing", icon: BadgeDollarSign },
-      { label: "Demo", id: "demo", icon: PlayCircle },
     ],
   },
   {
@@ -35,12 +35,14 @@ const groups = [
     links: [
       { label: "Seamless 2026", id: "event", icon: CalendarDays },
       { label: "Book a meeting", id: "lead", href: "https://cal.com/meetdaone/20min", icon: CalendarCheck2 },
-      { label: "Contact", id: "lead", icon: ContactRound },
+      { label: "Contact", id: "lead", href: "https://dataalpha.ai/contact/", icon: ContactRound },
     ],
   },
 ];
 
 export function Footer() {
+  const [showSeamlessModal, setShowSeamlessModal] = useState(false);
+
   return (
     <footer className="border-t border-line bg-canvas-2/50 pb-24 pt-16 md:pb-10">
       <Container>
@@ -64,7 +66,7 @@ export function Footer() {
                 size="sm"
                 onClick={() => {
                   track("event_meeting_click", { source: "footer" });
-                  openBookingOrLead("seamless");
+                  setShowSeamlessModal(true);
                 }}
               >
                 Meet us at Seamless
@@ -107,7 +109,11 @@ export function Footer() {
                           <button
                             type="button"
                             className="inline-flex items-center gap-1.5 text-sm text-ink-2 hover:text-ink"
-                            onClick={() => scrollToId(link.id)}
+                            onClick={() =>
+                              link.id === "event"
+                                ? setShowSeamlessModal(true)
+                                : scrollToId(link.id)
+                            }
                           >
                             <Icon size={14} />
                             <span>{link.label}</span>
@@ -189,6 +195,9 @@ export function Footer() {
           </div>
         </div>
       </Container>
+      {showSeamlessModal && (
+        <SeamlessEventModal onClose={() => setShowSeamlessModal(false)} />
+      )}
     </footer>
   );
 }

@@ -61,7 +61,7 @@ export function HeroProductDemo() {
         <div className="flex min-w-0 flex-1 flex-col">
           {/* Top bar */}
           <div className="border-b border-line px-4 py-3 sm:px-5">
-            <img src="/DAOne_Blue logo.png" alt="DA One" className="h-8 w-auto dark:brightness-0 dark:invert" />
+            {/* <img src="/DAOne_Blue logo.png" alt="DA One" className="h-8 w-auto dark:brightness-0 dark:invert" /> */}
           </div>
 
           {/* Main */}
@@ -117,7 +117,7 @@ export function HeroProductDemo() {
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="hidden items-center gap-1 text-[11px] font-medium text-ink-2 sm:flex">
-                    DataAlpha 1.0
+                    DaOne 1.0
                     <ChevronDown size={12} aria-hidden="true" />
                   </span>
                   <button
