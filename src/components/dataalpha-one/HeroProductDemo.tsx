@@ -15,12 +15,12 @@ const railNav = [
   { id: "semantic", label: "Semantic Layer", Icon: Layers },
 ];
 
-const quickChips = [
-  { label: "Dashboards", Icon: BarChart3, isNew: false },
-  { label: "Reports", Icon: FileText, isNew: true },
-  { label: "Data", Icon: Database, isNew: false },
-  { label: "Semantic Layer", Icon: Layers, isNew: false },
-];
+// const quickChips = [
+//   { label: "Dashboards", Icon: BarChart3, isNew: false },
+//   { label: "Reports", Icon: FileText, isNew: true },
+//   { label: "Data", Icon: Database, isNew: false },
+//   { label: "Semantic Layer", Icon: Layers, isNew: false },
+// ];
 
 export function HeroProductDemo() {
   const [activeRail, setActiveRail] = useState("chat");
@@ -49,13 +49,13 @@ export function HeroProductDemo() {
             </button>
           ))}
           <div className="flex-1" />
-          <button
+          {/* <button
             type="button"
             title="New chat"
             className="flex size-[34px] items-center justify-center rounded-[9px] text-muted transition-colors hover:bg-canvas-2 hover:text-ink"
           >
             <Plus size={17} aria-hidden="true" />
-          </button>
+          </button> */}
         </nav>
 
         <div className="flex min-w-0 flex-1 flex-col">
@@ -107,18 +107,18 @@ export function HeroProductDemo() {
                   >
                     <Plus size={16} aria-hidden="true" />
                   </button>
-                  <button
+                  {/* <button
                     type="button"
                     className="flex items-center gap-1.5 rounded-[8px] border border-line px-2 py-1 text-[11px] font-medium text-muted transition-colors hover:border-line-strong hover:text-ink-2"
                   >
                     <BarChart3 size={11} aria-hidden="true" />
                     Reasoning
-                  </button>
+                  </button> */}
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="hidden items-center gap-1 text-[11px] font-medium text-ink-2 sm:flex">
                     DaOne 1.0
-                    <ChevronDown size={12} aria-hidden="true" />
+                    {/* <ChevronDown size={12} aria-hidden="true" /> */}
                   </span>
                   <button
                     type="button"
@@ -136,7 +136,7 @@ export function HeroProductDemo() {
             </div>
 
             {/* Quick chips */}
-            <div className="mt-4 flex flex-wrap justify-center gap-1.5">
+            {/* <div className="mt-4 flex flex-wrap justify-center gap-1.5">
               {quickChips.map(({ label, Icon, isNew }) => (
                 <button
                   key={label}
@@ -159,7 +159,7 @@ export function HeroProductDemo() {
                 More
                 <ChevronDown size={12} aria-hidden="true" />
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
