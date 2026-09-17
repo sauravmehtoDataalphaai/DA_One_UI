@@ -1,6 +1,6 @@
 import { useState } from "react";
 import {
-  ArrowUp, BarChart3, ChevronDown, ChevronRight,
+  ArrowUp, BarChart3, ChevronRight,
   Database, FileText, Layers, MessageSquare, Plus,
 } from "lucide-react";
 import { track } from "@/lib/analytics";
